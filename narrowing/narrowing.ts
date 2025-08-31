@@ -79,6 +79,8 @@ function getPizzaDetail(id: string | number) {
         return menu.find(i => i.name.toLowerCase() === id.toLowerCase())
     } else if (typeof id === "number") {
         return menu.find(i => i.id === id)
+    } else {
+        throw new TypeError("Parameter 'id' must be string or number")
     }
 }
 
